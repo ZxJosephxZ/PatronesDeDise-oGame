@@ -14,21 +14,24 @@ public class Utils {
         public static final int JUMP = 1;
         public static final int ATACK = 5;
         public static final int ATACKJUMP = 4;
+        public static final int DOWN = 6;
 
         public static int getFrames(int state)
         {
             switch (state)
             {
+                case JUMP:
+                    return 3;
                 case IDLE:
                     return 4;
                 case MOVING:
                     return 4;
-                case JUMP:
-                    return 5;
                 case ATACK:
                     return 4;
                 case ATACKJUMP:
                     return 4;
+                case DOWN:
+                    return 2;
                 default:
                     return 1;
             }
@@ -48,6 +51,8 @@ public class Utils {
                     return 5;
                 case ATACKJUMP:
                     return 4;
+                case DOWN:
+                    return 6;
                 default:
                     return 0;
             }
